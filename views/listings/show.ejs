@@ -30,9 +30,10 @@
     <hr />
     <h4>Leave a Review</h4>
     <form
-      class="mb-3"
+      class="mb-3 needs-validation"
       action="/listings/<%= listing.id %>/reviews"
       method="post"
+      novalidate
     >
       <div>
         <label for="rating" class="form-label">Rating</label>
@@ -53,7 +54,9 @@
           id="comment"
           cols="30"
           rows="5"
+          required
         ></textarea>
+        <div class="invalid-feedback">Please add some comments for reviews</div>
       </div>
       <button class="btn btn-outline-dark">Submit</button>
     </form>
